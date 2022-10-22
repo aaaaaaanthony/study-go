@@ -38,4 +38,14 @@ func main() {
 	s3 := "anthony4"
 	fmt.Println(s3)
 
+	// 匿名变量不占用命名空间,也不会分配内存,所以匿名变量之间不存在重复声明
+	// 下划线_ 就是匿名变量
+	// s1 := "anthony5" 在同一个作用域里不能重复声明
+	a, _ := noSign()
+	fmt.Println(a)
+
+}
+
+func noSign() (int, int) {
+	return 5, 6
 }
