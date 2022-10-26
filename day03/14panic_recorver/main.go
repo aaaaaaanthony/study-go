@@ -25,7 +25,7 @@ func funcB() {
 
 	// 程序崩溃退出
 	panic("出现了严重的错误")
-	fmt.Println("b")
+	// fmt.Println("b")
 }
 
 func funcC() {
