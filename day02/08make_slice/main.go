@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-// make函数创建的切片
+// make函数创建的切片 ,make只能用于 slice  map  chan   返回的是对应的这个三个类型的本身
+// new很少用,一般用来给基本数据类型申请内存  stirng\int.... ,返回的是对应类型的指针
 func main() {
 
 	s1 := make([]int, 5, 10)

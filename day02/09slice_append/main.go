@@ -13,4 +13,11 @@ func main() {
 
 	s2 := append(s1, "西安")
 	fmt.Println(s2)
+
+	s1 = append(s1, "佛山", "纽约")
+	fmt.Println(s1)
+
+	ss := []string{"伦敦", "法国"}
+	s1 = append(s1, ss...) // ...表示拆开
+	fmt.Println(s1)
 }
