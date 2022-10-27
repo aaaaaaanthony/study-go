@@ -37,6 +37,8 @@ func main() {
 	f2(&p)
 	fmt.Println(p.name)
 
+	fmt.Println("=====================")
+
 	// 结构体指针1
 	// 变量p2是指针类型
 	var p2 = new(person)
