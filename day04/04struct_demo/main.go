@@ -36,4 +36,16 @@ func main() {
 	fmt.Println("=====================")
 	f2(&p)
 	fmt.Println(p.name)
+
+	// 结构体指针1
+	// 变量p2是指针类型
+	var p2 = new(person)
+	fmt.Printf("%T %p %p\n", p2, p2, &p2)
+
+	// 结构体指针2
+	var p3 = person{
+		name: "anthony",
+		age:  12,
+	}
+	fmt.Printf("%T %v %p\n", p3, p3, &p3)
 }
