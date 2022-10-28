@@ -7,7 +7,7 @@ import (
 
 type person struct {
 	Name string `json:"name"`
-	Age  int    `json:"age`
+	Age  int    `json:"age"`
 }
 
 // 把结构体转成json
