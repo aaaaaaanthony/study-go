@@ -39,4 +39,7 @@ func main() {
 	v1.run()
 	h1.run()
 
+	var v2 xiaomi
+	fmt.Printf("%p\n", &v2)
+
 }
