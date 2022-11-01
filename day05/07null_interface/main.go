@@ -13,4 +13,29 @@ func main() {
 		fmt.Println(k, v)
 	}
 
+	assign2("123")
+
+}
+
+// 类型断言1
+func assign(x interface{}) {
+
+	fmt.Printf("%T\n", x)
+	str, ok := x.(string)
+	if !ok {
+		fmt.Println("猜错了")
+	} else {
+		fmt.Println("才对了", str)
+	}
+
+}
+
+// 类型断言2
+func assign2(x interface{}) {
+
+	switch v := x.(type) {
+	case string:
+		fmt.Println("string", v)
+	}
+
 }
