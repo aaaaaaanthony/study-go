@@ -2,6 +2,6 @@ package calc
 
 import "fmt"
 
-func add() {
+func Add() {
 	fmt.Println("add")
 }
