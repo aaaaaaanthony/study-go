@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	my "study-go/mydoc/mynet"
+	my "study-go/01_study-base/mydoc/mynet"
 )
 
 func main() {

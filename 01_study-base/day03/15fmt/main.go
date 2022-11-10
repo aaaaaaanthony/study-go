@@ -9,6 +9,6 @@ func main() {
 	fmt.Scan(&s)
 	fmt.Println(s)
 
-	fmt.Scanf("",&s)
+	fmt.Scanf("", &s)
 
 }
