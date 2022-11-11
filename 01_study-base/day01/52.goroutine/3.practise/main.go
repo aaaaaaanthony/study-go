@@ -7,6 +7,8 @@ import (
 
 var wg sync.WaitGroup
 
+// 一个特殊情况的联系
+// goroutine + 闭包
 func main() {
 
 	for i := 0; i < 1000; i++ {

@@ -8,20 +8,37 @@ import (
 var a []int
 
 // 需要指定通道中元素的类型
+// 通道必须使用make函数初始化才能使用
 var b chan int
 
 var wg sync.WaitGroup
 
-// channel
+// channel 的入门
 func main() {
-	// nil
-	//Nobuff()
 
 	//buff()
 
+	//buffMistake()
+
+	noBuff()
+
 }
 
-func buff2() {
+// 带缓冲区的channel
+func buff() {
+	b = make(chan int, 1)
+	// 写数据
+	b <- 10
+	fmt.Println("发送到通道中去了")
+	// 读数据
+	x := <-b
+	fmt.Println("收到数据了:", x)
+	close(b)
+}
+
+// 带缓冲区的channel的错误演示,死锁
+// 指定了缓冲区的大小为1,当10写进入,就不能再写了,必须得读出来,才能继续写
+func buffMistake() {
 	b = make(chan int, 1)
 	wg.Add(1)
 	b <- 10
@@ -34,24 +51,11 @@ func buff2() {
 	close(b)
 }
 
-func buff() {
-	b = make(chan int, 1)
-	wg.Add(1)
-	b <- 10
-	fmt.Println("发送到通道中去了")
-	x := <-b
-	fmt.Println("收到数据了:", x)
-	close(b)
-}
+// 不带缓冲区的channel
+func noBuff() {
 
-func Nobuff() {
-	fmt.Println(b)
 	// 通道必须使用make函数初始化才能使用,不带缓冲区通道的初始化
 	b = make(chan int)
-	// 带缓冲区的
-	//b = make(chan int, 16)
-	// 发送  chi1 <- 1
-	// 接收  <- chi1
 
 	wg.Add(1)
 	go func() {
