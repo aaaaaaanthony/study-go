@@ -1,7 +1,7 @@
 package main
 
 import (
-	"study-go/01_study-base/day01/47.calc"
+	"study-go/01_study-base/base/47.calc"
 )
 
 func main() {
