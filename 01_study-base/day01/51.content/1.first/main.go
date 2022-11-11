@@ -13,6 +13,7 @@ var exitChan = make(chan bool, 1)
 
 func main() {
 
+	// 声明一个根
 	ctx, cancel := context.WithCancel(context.Background())
 	wg.Add(2)
 
