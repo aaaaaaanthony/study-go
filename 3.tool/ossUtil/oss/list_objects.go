@@ -29,6 +29,22 @@ func DeleteObject(key string) {
 
 }
 
+func IsObjectExist(key string) (exist bool) {
+
+	exist, err2 := GetObjectsClient().IsObjectExist(key)
+	if err2 != nil {
+		fmt.Println("查找文件错误")
+	}
+
+	if exist == true {
+		fmt.Println("文件存在")
+	} else {
+		fmt.Println("文件不存在")
+	}
+
+	return
+}
+
 // GetObjectsClient 用来操作桶里的文件的
 func GetObjectsClient() (bucket *oss.Bucket) {
 	bucket, err := GetBucketsClient().Bucket("hexosrc")
