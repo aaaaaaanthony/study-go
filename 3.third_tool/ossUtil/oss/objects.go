@@ -29,6 +29,7 @@ func DeleteObject(key string) {
 
 }
 
+// IsObjectExist 判断文件是否存在
 func IsObjectExist(key string) (exist bool) {
 
 	exist, err2 := GetObjectsClient().IsObjectExist(key)
@@ -43,6 +44,17 @@ func IsObjectExist(key string) (exist bool) {
 	}
 
 	return
+}
+
+// 下载文件
+func Download(key string, newName string) {
+	err := GetObjectsClient().GetObjectToFile(key, newName)
+	if err != nil {
+		fmt.Println("文件下载失败")
+	} else {
+		fmt.Println("文件下载成功")
+	}
+
 }
 
 // GetObjectsClient 用来操作桶里的文件的

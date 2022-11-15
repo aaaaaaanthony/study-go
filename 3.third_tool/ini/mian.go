@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	cfg, err := ini.Load("/Users/anthony/GolandProjects/study-go/4.third_tool/ini/config.ini")
+	cfg, err := ini.Load("/Users/anthony/GolandProjects/study-go/3.third_tool/ini/config.ini")
 	if err != nil {
 		log.Fatal("Fail to read file: ", err)
 	}

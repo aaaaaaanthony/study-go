@@ -16,10 +16,10 @@ func init() {
 
 	// go build
 	// 用不用等号效果是一样的
-	// $ ./01_flag -intFlag=12 -boolFlag=true -stringFlag=abc
-	// $ ./01_flag -intFlag 12 -boolFlag true -stringFlag abc
+	// $ ./1.flag -intFlag=12 -boolFlag=true -stringFlag=abc
+	// $ ./1.flag -intFlag 12 -boolFlag true -stringFlag abc
 
-	// $ ./01_flag -help
+	// $ ./1.flag -help
 
 	//  方法里的第二个参数,是指定名字
 	flag.IntVar(&intFlag, "intFlag", 0, "整数的值")

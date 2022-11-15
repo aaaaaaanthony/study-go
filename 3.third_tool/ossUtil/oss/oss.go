@@ -16,7 +16,7 @@ func GetBucketsClient() *oss.Client {
 }
 
 func parse() (enpoint, key, secret string) {
-	cfg, err := ini.Load("/Users/anthony/GolandProjects/study-go/3.tool/ossUtil/config.ini")
+	cfg, err := ini.Load("/Users/anthony/Documents/GitHub/study-go/3.third_tool/ossUtil/config.ini")
 	if err != nil {
 		log.Fatal("文件打开错误: ", err)
 	}
