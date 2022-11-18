@@ -7,7 +7,7 @@ import (
 
 // ListObjects 文件列表
 func ListObjects() {
-	lists, err := GetObjectsClient().ListObjects()
+	lists, err := GetObjectsClient().ListObjects(oss.MaxKeys(1000))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -46,7 +46,7 @@ func IsObjectExist(key string) (exist bool) {
 	return
 }
 
-// 下载文件
+// Download 下载文件
 func Download(key string, newName string) {
 	err := GetObjectsClient().GetObjectToFile(key, newName)
 	if err != nil {
